@@ -62,10 +62,10 @@
 		7953F18D2BA1047300C2E633 /* ShowAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				7953F1A92BA105DA00C2E633 /* Services */,
-				7953F1A82BA1058B00C2E633 /* Models */,
 				7953F1A62BA1055E00C2E633 /* ViewControllers */,
 				7953F1A72BA1057100C2E633 /* Storyboards */,
+				7953F1A92BA105DA00C2E633 /* Services */,
+				7953F1A82BA1058B00C2E633 /* Models */,
 				7953F1A52BA1053B00C2E633 /* App */,
 				7953F1972BA1047400C2E633 /* Assets.xcassets */,
 			);
