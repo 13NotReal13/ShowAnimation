@@ -5,4 +5,9 @@
 //  Created by Иван Семикин on 12/03/2024.
 //
 
-import Foundation
+import SpringAnimation
+
+struct AnimationsStore {
+    var animations = AnimationPreset.allCases
+    var curves = AnimationCurve.allCases
+}
