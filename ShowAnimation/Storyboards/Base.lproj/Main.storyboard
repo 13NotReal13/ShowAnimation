@@ -23,7 +23,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tnM-Ze-5yZ">
                                         <rect key="frame" x="16" y="16" width="248" height="141.66666666666666"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="preset:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JqA-fG-Ck4">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="preset" text="preset:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JqA-fG-Ck4">
                                                 <rect key="frame" x="0.0" y="0.0" width="53.333333333333336" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -83,6 +83,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="runSpringAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2yT-i6-LXJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -95,6 +98,14 @@
                             <constraint firstItem="ZJg-2Z-2g5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uKc-si-uP6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="springAnimationView" destination="XHa-am-JPt" id="Ate-hC-2G8"/>
+                        <outletCollection property="detailsLabels" destination="JqA-fG-Ck4" collectionClass="NSMutableArray" id="Uoa-9N-CTr"/>
+                        <outletCollection property="detailsLabels" destination="Mo0-s6-rGq" collectionClass="NSMutableArray" id="OMl-zs-9dw"/>
+                        <outletCollection property="detailsLabels" destination="gbH-Id-0gZ" collectionClass="NSMutableArray" id="d2m-k4-T4y"/>
+                        <outletCollection property="detailsLabels" destination="nWd-i7-rEu" collectionClass="NSMutableArray" id="N9O-Jl-GED"/>
+                        <outletCollection property="detailsLabels" destination="uuS-jy-nWD" collectionClass="NSMutableArray" id="ixq-09-77b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -7,7 +7,7 @@
 
 import SpringAnimation
 
-struct AnimationsStore {
+final class AnimationsStore {
     var animations = AnimationPreset.allCases
     var curves = AnimationCurve.allCases
 }
