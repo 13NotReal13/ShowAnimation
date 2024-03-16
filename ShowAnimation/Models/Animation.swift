@@ -12,12 +12,22 @@ struct Animation {
     let duration: Double
     let delay: Double
     
+    var description: String {
+        """
+        preset: \(preset)
+        curve: \(curve)
+        force: \(String(format: "%.2f", force))
+        duration: \(String(format: "%.2f", duration))
+        delay: \(String(format: "%.2f", delay))
+        """
+    }
+    
     static func getAnimation() -> Animation {
-        let store = AnimationsStore()
+        let store = DataStore.shared
         
         return Animation(
-            preset: store.animations.randomElement()?.rawValue ?? "",
-            curve: store.curves.randomElement()?.rawValue ?? "",
+            preset: store.animations.randomElement()?.rawValue ?? "wobble",
+            curve: store.curves.randomElement()?.rawValue ?? "easeIn",
             force: Double.random(in: 1.00...1.40),
             duration: Double.random(in: 1.00...1.40),
             delay: 0.3

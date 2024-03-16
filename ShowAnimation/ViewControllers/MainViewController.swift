@@ -11,13 +11,13 @@ import SpringAnimation
 final class MainViewController: UIViewController {
     
     @IBOutlet var springAnimationView: SpringView!
-    @IBOutlet var detailsLabels: [UILabel]!
+    @IBOutlet var animationLabel: UILabel!
     
     private var animation = Animation.getAnimation()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setLabels()
+        animationLabel.text = animation.description
     }
 
     @IBAction func runSpringAnimation(_ sender: UIButton) {
@@ -28,17 +28,9 @@ final class MainViewController: UIViewController {
         springAnimationView.delay = animation.delay
         springAnimationView.animate()
         
-        setLabels()
+        animationLabel.text = animation.description
         animation = Animation.getAnimation()
         sender.setTitle("Run \(animation.preset)", for: .normal)
-    }
-    
-    private func setLabels() {
-        detailsLabels[0].text = "preset: \(animation.preset)"
-        detailsLabels[1].text = "curve: \(animation.curve)"
-        detailsLabels[2].text = "force: \(String(format: "%.2f", animation.force))"
-        detailsLabels[3].text = "duration: \(String(format: "%.2f", animation.duration))"
-        detailsLabels[4].text = "delay: \(String(format: "%.2f", animation.delay))"
     }
 }
 
